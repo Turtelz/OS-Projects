@@ -1,0 +1,1 @@
+FAIL: fsetxattr() failed to create a new attribute with XATTR_CREATE.

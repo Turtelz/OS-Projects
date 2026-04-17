@@ -1,0 +1,4 @@
+send: spawn id exp4 not open
+    while executing
+"send "[lindex $argv 3]\r""
+    (file "../tests/run-xv6-command.exp" line 48)

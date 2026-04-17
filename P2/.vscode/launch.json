@@ -1,0 +1,55 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "xv6 Debug-Tests",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/solution/kernel",
+            "miDebuggerServerAddress": "localhost:25000",
+            "miDebuggerPath": "/usr/bin/gdb", 
+            "targetArchitecture": "x86", 
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load symbols",
+                    "text": "symbol-file ${workspaceFolder}/solution/kernel",
+                    "ignoreFailures": false
+                }
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Run xv6 QEMU",
+            "MIMode": "gdb",
+            "serverLaunchTimeout": 10000, // Wait up to 10 seconds for the server to respond
+        },
+        {
+            "name": "xv6 Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/solution/kernel",
+            "miDebuggerServerAddress": "localhost:25000",
+            "miDebuggerPath": "/usr/bin/gdb", 
+            "targetArchitecture": "x86", 
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Load symbols",
+                    "text": "symbol-file ${workspaceFolder}/solution/kernel",
+                    "ignoreFailures": false
+                }
+            ],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "Run xv6 QEMU",
+            "MIMode": "gdb",
+            "serverLaunchTimeout": 10000, // Wait up to 10 seconds for the server to respond
+        }
+    ]
+}

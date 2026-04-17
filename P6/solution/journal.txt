@@ -1,0 +1,20 @@
+ok so
+
+
+in fs.c, helper functions
+implement sysfile.c, the funtions as needed
+reference user.h to understand what you have 
+1.) 
+    fgetxattr()
+    fsetxattr() 
+     -the paramaters of xattr_set have changed to include flags
+    fremovexattr()
+    flistxattr()
+
+2.)
+    countusedb()
+
+3.)
+    modify the file system
+
+xv6 storage stack learning

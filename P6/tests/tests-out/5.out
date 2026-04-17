@@ -1,0 +1,5 @@
+<<<<<<< HEAD
+FAIL: Test Timed Out!
+=======
+FAIL: fgetxattr() size query mode returned an incorrect size.
+>>>>>>> ca34adfee5abd0e29a3c2104d907578efc6595d3
