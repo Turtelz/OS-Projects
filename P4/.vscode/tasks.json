@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run xv6 QEMU",
+            "type": "shell",
+            "command": "/usr/bin/make CPUS=1 SCHEDULER=STCF -f Makefile.test qemu-nox-gdb && sleep 1",
+            "options": {
+                "cwd": "${workspaceFolder}/solution"
+            },
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always",
+                "focus": true,
+                "panel": "new",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "pattern": {
+                    "regexp": "."
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": ".*",
+                    "endsPattern": "tcp::25000"
+                }
+            },
+        }
+    ]
+}

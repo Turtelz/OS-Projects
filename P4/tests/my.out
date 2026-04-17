@@ -1,0 +1,59 @@
+spawn make CPUS=1 SCHEDULER=STCF -f Makefile.test qemu-nox
+qemu-system-i386 -nographic -drive file=fs.img,index=1,media=disk,format=raw -drive file=xv6.img,index=0,media=disk,format=raw -smp 1 -m 512 
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+1FF8B4A0+1FECB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..xv6...
+cpu0: starting 0
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap start 58
+init: starting sh
+XV6: Fork() starting to copy mappings from parent: 0x1 to child 0x2
+XV6: parent has no mappings to copy
+$ test_13
+XV6: Fork() starting to copy mappings from parent: 0x2 to child 0x3
+XV6: parent has no mappings to copy
+XV6: TEST_13
+XV6: Initial State: 
+XV6: ------ Total mmaps: 0
+XV6: Place one map. 
+XV6: Flag fixed is set running fix_addr_place_mmap
+XV6: lowerbound: 0x60000000 | upperbound: 0x80000000 | addr: 0x60000000 | addr + length: 0x6000a000 
+XV6: fix_addr_place_mmap: 0x60000000 fd:0xffffffff
+XV6: Place one map. 
+XV6: Flag fixed is set running fix_addr_place_mmap
+XV6: lowerbound: 0x6000a000 | upperbound: 0x80000000 | addr: 0x6000b000 | addr + length: 0x6001500a 
+XV6: fix_addr_place_mmap: 0x6000b000 fd:0xffffffff
+XV6: Current State: 
+XV6: ------ Total mmaps: 2
+XV6: ------ mmap[0]: va [0x60000000] sz [40960] vend [0x6000A000] flags [0xD] fd [-1] rc[0] ld_pg [0] 
+XV6: ------ mmap[1]: va [0x6000B000] sz [40970] vend [0x6001500A] flags [0xE] fd [-1] rc[0] ld_pg [0] 
+XV6: Fork() starting to copy mappings from parent: 0x3 to child 0x4
+XV6: found an unused map in child
+XV6: private flag is set
+XV6: copy pgdir from 0x8df20000 to 0x8df75000
+XV6: found an unused map in child
+XV6: shared flag is set
+XV6: Child process starts
+XV6: Child State: 
+XV6: ------ Total mmaps: 2
+XV6: ------ mmap[0]: va [0x60000000] sz [40960] vend [0x6000A000] flags [0xD] fd [-1] rc[0] ld_pg [0] 
+XV6: ------ mmap[1]: va [0x6000B000] sz [40970] vend [0x6001500A] flags [0xE] fd [-1] rc[1] ld_pg [0] 
+c[?7l[2J[0mSeaBIOS (version 1.15.0-1)
+
+
+iPXE (https://ipxe.org) 00:03.0 CA00 PCI2.10 PnP PMM+1FF8B4A0+1FECB4A0 CA00
+Press Ctrl-B to configure iPXE (PCI 00:03.0)...                                                                               
+
+
+Booting from Hard Disk..xv6...
+cpu0: starting 0
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap start 58
+init: starting sh
+XV6: Fork() starting to copy mappings from parent: 0x1 to child 0x2
+XV6: parent has no mappings to copy
+$ QEMU: Terminated
+
